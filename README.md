@@ -115,8 +115,8 @@ To set up the project for development:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Slygriyrsk/task-manager-cli.git
-   cd task-manager-cli
+   git clone https://github.com/Slygriyrsk/ts-task-manager-cli.git
+   cd ts-task-manager-cli
    ```
 
 2. Install dependencies:
