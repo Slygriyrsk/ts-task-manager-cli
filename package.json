@@ -1,0 +1,30 @@
+{
+  "name": "ts-task-manager-cli",
+  "version": "1.0.0",
+  "description": "A CLI task manager built with TypeScript",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "task-manager": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts"
+  },
+  "keywords": ["typescript", "cli", "task-manager"],
+  "author": "Saharsh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "@types/inquirer": "^8.2.0",
+    "@types/node": "^16.11.12",
+    "inquirer": "^8.2.0",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0"
+  }
+}
