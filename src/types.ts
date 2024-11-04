@@ -4,7 +4,7 @@ export interface Task {
     description: string;
     priority: TaskPriority;
     status: TaskStatus;
-}
-
-export type TaskPriority = 'Low' | 'Medium' | 'High';
-export type TaskStatus = 'Todo' | 'InProgress' | 'Completed';
+  }
+  
+  export type TaskPriority = 'Low' | 'Medium' | 'High';
+  export type TaskStatus = 'Todo' | 'InProgress' | 'Completed';

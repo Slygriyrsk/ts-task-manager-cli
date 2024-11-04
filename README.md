@@ -9,6 +9,9 @@ A command-line interface (CLI) application for managing tasks, built with TypeSc
 - Update task status
 - View all tasks
 - View tasks by priority
+- Delete all tasks
+- Delete task by ID
+- Delete tasks by filter
 
 ## Folder Structure
 
@@ -105,8 +108,30 @@ The CLI will present you with the following options:
    │    1    │ Complete project ... │ Finish the quarterly proje ... │  'High'  │ 'Completed'│
    └─────────┴──────────────────────┴────────────────────────────────┴──────────┴────────────┘
    ```
+ 
+6. **Delete all tasks**:
+   Deletes all tasks in the system.
 
-6. **Exit**: 
+7. **Delete task by ID**:
+   Allows you to delete a specific task by its ID.
+   Example:
+   ```
+   ? Complete project
+   ```
+
+8. **Delete tasks by filter**:
+   Allows you to delete tasks based on specific criteria (ID, title, description, priority, or status).
+
+   Example:
+   ```
+   ? id
+     title
+     description
+     priority
+     status
+   ```
+
+9. **Exit**: 
    Closes the application.
 
 ## Development

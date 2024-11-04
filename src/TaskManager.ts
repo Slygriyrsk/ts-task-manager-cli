@@ -46,4 +46,45 @@ export class TaskManager {
     getAllTasks(): Task[] {
         return this.tasks;
     }
+
+    deleteAllTasks(): void {
+        this.tasks = [];
+        console.log("All tasks have been deleted");
+    }
+
+    deleteTaskById(id: number): void {
+        // get the initial no of task before deletion
+        const initialLen = this.tasks.length;
+
+        //get the task to be deleted
+        this.tasks = this.tasks.filter(t => t.id !== id);
+
+        // delete if it is there by comparing the lengths
+        if(this.tasks.length < initialLen) {
+            console.log(`Task with id ${id} has been deleted`);
+        }else {
+            console.log(`The Task with the given id ${id} doesnot exists`);
+        }
+    }
+
+    // here we can filter the task by any property like id, status, priority, description and title to be delted
+    // partial we use because to access only some of the properties of Task interface
+    deleteTaskByFilter(filter: Partial<Task>): void {   
+        // initial length of the task
+        const initialLen = this.tasks.length;
+
+        this.tasks = this.tasks.filter(task => {
+            return !Object.keys(filter).every(key => {
+                // verify that every key in an object meets a certain condition that it satisfies all the conditions
+                return filter[key as keyof Task] === task[key as keyof Task]; // this is the syntax to check it if the filter matches the task
+            });
+        });
+
+        const deletedTask = initialLen - this.tasks.length;
+        if(deletedTask > 0) {
+            console.log(`${deletedTask} has been deleted from the task`);
+        }else {
+            console.log('Didnot match the params to delete the task');
+        }
+    }
 }
